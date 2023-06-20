@@ -1,0 +1,22 @@
+div{
+    height: 300px;
+    width: 300px;
+    /* background-color: red; */
+    border-width: 3px;
+    border-style: solid;
+    border-color: red;
+}
+.block{
+    background-color: brown;
+    /* padding-bottom: 10px; */
+    margin: 10px 20px;
+
+    /* background-image: url(../02.Revision/asa.jpg); */
+
+    /* background: #000 url(../02.Revision/asa.jpg) no-repeat top left; */
+    /* background-size: cover;
+    background-position: top right; */
+}
+#block{
+    background-color: green;
+}
