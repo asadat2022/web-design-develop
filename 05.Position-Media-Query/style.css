@@ -1,0 +1,59 @@
+.block {
+    height: 200px;
+    width: 200px;
+    background-color: brown;
+    border-width: 2px;
+    border-style: solid;
+    margin: 5px;
+    border-color: black;
+/* 
+    max-height: 300px;
+    max-width: 300px;
+    min-width: 100px;
+    min-height: 100px; */
+}
+
+.block1 {
+    height: 100px;
+    width: 100px;
+    background-color: greenyellow;
+    border-width: 2px;
+    border-style: solid;
+    margin: 5px;
+    border-color: black;
+
+}
+
+.position-static {
+    position: static;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.position-fixed {
+    position: fixed;
+}
+
+.position-sticky {
+    position: sticky;
+}
+
+@media only screen and (max-width: 320px){
+    .block{
+        height: 50px;
+        width: 50px;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 375px){
+    .block{
+        height: 70px;
+        width: 70px;
+    }
+}
