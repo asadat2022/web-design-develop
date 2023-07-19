@@ -85,14 +85,17 @@ first_name.push('Hamza');
 
 
 
+// let test = {
+//     key:"s",
+// }
+// console.log(test.key);
+
+
+
 // Array of Objects 
 var obj_std = [
     { //Object 
-        name: {
-            first_name: "Ali",
-            mid_name: "Ahmad",
-            last_name: "Tanveer",
-        },
+        name: "test",
         phone: [1, 2, 3],
     },
     {
@@ -104,7 +107,7 @@ var obj_std = [
         phone: [1, 2, 3],
     }
 ]
-
+// console.log(obj_std[0].phone[2]);
 
 // for (let index = 0; index < obj_std.length; index++) {
 //     const element = obj_std[index];
@@ -115,12 +118,12 @@ var obj_std = [
 //     console.log(element.name.last_name);
 // })
 
-const listing = (element)=>{  // This is an arrow Function Printing Data 
-    console.log("ID: ",element.id);
-    console.log("Username: ",element.username);
-}
+// const listing = (element)=>{  // This is an arrow Function Printing Data 
+//     console.log("ID: ",element.id);
+//     console.log("Username: ",element.username);
+// }
 // 
-users.forEach(listing) // Using preDefine for loop Function For Array Required Function As a Parameter
+// users.forEach(listing) // Using preDefine for loop Function For Array Required Function As a Parameter
 // console.log(obj_std.phone[0]);
 // console.log(obj_std.name.last_name);
 
@@ -134,14 +137,50 @@ users.forEach(listing) // Using preDefine for loop Function For Array Required F
 // console.log(obj_std.mid_name);
 
 
-// function sum(x,y) { //Function With Function keyword 
+// function test(x,y) { //Function With Function keyword 
 //     console.log(x+y);
 // }
 
-const sum = (a, b) => { //Arrow Function For Sum 
-    console.log(a + b);
-};
+// const sum = (a, b) => { //Arrow Function For Sum 
+//     console.log(a + b);
+// };
 
-sum(4, 5);
+// test(4, 5);
 
-sum(7, 5);
+// test(7, 5);
+
+// function name(a, b, c, d) {
+
+// }
+
+// const vari = function (a, b, c, d) {
+
+// }
+
+
+// const varia = (a, b, c, d) => {
+
+// }
+
+// users.forEach((a, b) => {
+
+// })
+// users.forEach(function (data) {
+
+// })
+
+
+axios.get('https://jsonplaceholder.typicode.com/posts').then(function (response) {
+    console.log(response.data);
+    const users = response.data
+
+    let data1 = '';
+    let test = document.getElementById('test');
+    users.forEach(function (data) {
+        data1 = data1 + '<div class="col-4 my-2"><div class="card">' +
+            '<ul class="list-group"><li class="list-group-item">' + data.title + '</li><li class="list-group-item">Item 2</li><li class="list-group-item">Item 3</li><li class="list-group-item">Item 4</li><li class="list-group-item"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">View</button></li></ul></div></div>';
+        test.innerHTML = data1;
+    })
+    console.log(test);
+})
+
