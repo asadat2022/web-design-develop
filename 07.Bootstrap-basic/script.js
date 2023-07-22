@@ -170,17 +170,24 @@ var obj_std = [
 // })
 
 
-axios.get('https://jsonplaceholder.typicode.com/posts').then(function (response) {
-    console.log(response.data);
-    const users = response.data
+// axios.get('https://jsonplaceholder.typicode.com/posts').then(function (response) {
+//     console.log(response.data);
+//     const users = response.data
 
-    let data1 = '';
-    let test = document.getElementById('test');
-    users.forEach(function (data) {
-        data1 = data1 + '<div class="col-4 my-2"><div class="card">' +
-            '<ul class="list-group"><li class="list-group-item">' + data.title + '</li><li class="list-group-item">Item 2</li><li class="list-group-item">Item 3</li><li class="list-group-item">Item 4</li><li class="list-group-item"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">View</button></li></ul></div></div>';
-        test.innerHTML = data1;
-    })
-    console.log(test);
+//     let data1 = '';
+//     users.forEach(function (data) {
+//         data1 = data1 + '<div class="col-4 my-2"><div class="card">' +
+//             '<ul class="list-group"><li class="list-group-item">' + data.title + '</li><li class="list-group-item">Item 2</li><li class="list-group-item">Item 3</li><li class="list-group-item">Item 4</li><li class="list-group-item"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">View</button></li></ul></div></div>';
+        
+        
+//             $('#test').html(data1);
+//     })
+//     console.log(test);
+// })
+
+
+$('#test').html("sdkjhfkjsdhfkjd");
+$('#btnclick').click(function(){
+    
+    $('#test').toggle();
 })
-
