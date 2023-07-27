@@ -17,14 +17,14 @@
                     <div class="card-header">
                         Form
                     </div>
-                    <form action="" method="GET">
+                    <form action="" id="handleSubmit">
                         <div class="card-body">
                             <div class="row my-1">
                                 <div class="col-3">
                                     <label class="form-label">Name:</label>
                                 </div>
                                 <div class="col-9">
-                                    <input type="text" name="name" class="form-control" pattern="[a-zA-Z ]{3,}" >
+                                    <input type="text" name="name" id="field-name" class="form-control" pattern="[a-zA-Z ]{3,}" >
                                 </div>
                             </div>
                             <div class="row my-1">
@@ -32,7 +32,7 @@
                                     <label class="form-label">Username:</label>
                                 </div>
                                 <div class="col-9">
-                                    <input type="text" name="username" class="form-control" >
+                                    <input type="text" name="username" id="field-username" class="form-control" >
                                 </div>
                             </div>
 
@@ -88,13 +88,13 @@
                                 </div>
                                 <div class="col-9">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="gender">
+                                        <input class="form-check-input gender" type="radio" value="male" name="gender">
                                         <label class="form-check-label">
                                             Male
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="gender">
+                                        <input class="form-check-input gender" type="radio" value="female" name="gender">
                                         <label class="form-check-label">
                                             Female
                                         </label>
@@ -108,20 +108,20 @@
                                 </div>
                                 <div class="col-9">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox">
+                                        <input class="form-check-input" value="Reading" id="hobby-reading" type="checkbox">
                                         <label class="form-check-label">
                                             Reading
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox">
+                                        <input class="form-check-input" value="Gardening" id="hobby-gardening" type="checkbox">
                                         <label class="form-check-label">
                                             Gardening
                                         </label>
                                     </div>
 
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox">
+                                        <input class="form-check-input" value="Cricket" id="hobby-cricket" type="checkbox">
                                         <label class="form-check-label">
                                             Cricket
                                         </label>
@@ -138,15 +138,29 @@
                 </div>
             </div>
             <div class="col-6">
-                <div class="card" style="width: 18rem;">
+                <div class="card">
                     <div class="card-header">
                         Featured
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">An item</li>
-                        <li class="list-group-item">A second item</li>
-                        <li class="list-group-item">A third item</li>
-                    </ul>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-3"><label class="form-label">Name:</label></div>
+                            <div class="col-9"><label id="label-name" class="form-label"></label></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3"><label class="form-label">Username:</label></div>
+                            <div class="col-9"><label id="label-username" class="form-label"></label></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-3"><label class="form-label">Hobby:</label></div>
+                            <div class="col-9"><label id="label-hobby" class="form-label"></label></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3"><label class="form-label">Gender:</label></div>
+                            <div class="col-9"><label id="label-gender" class="form-label"></label></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -154,6 +168,8 @@
 
 
     <script src="../00.Data/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../00.Data/js/jquery-3.7.0.min.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
