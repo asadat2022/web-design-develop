@@ -17,14 +17,16 @@
                     <div class="card-header">
                         Form
                     </div>
-                    <form action="" id="handleSubmit">
+                    <form action="" class='' id="handleSubmit" novalidate>
                         <div class="card-body">
                             <div class="row my-1">
                                 <div class="col-3">
                                     <label class="form-label">Name:</label>
                                 </div>
                                 <div class="col-9">
-                                    <input type="text" name="name" id="field-name" class="form-control" pattern="[a-zA-Z ]{3,}" >
+                                    <input type="text" name="name" id="field-name" class="form-control" title="" pattern="[a-zA-Z ]{3,}" required>
+                                    <label for="" class="valid-feedback">Looks Good</label>
+                                    <label for="" class="invalid-feedback">Name should be at least 3 characters longe</label>
                                 </div>
                             </div>
                             <div class="row my-1">
@@ -32,7 +34,7 @@
                                     <label class="form-label">Username:</label>
                                 </div>
                                 <div class="col-9">
-                                    <input type="text" name="username" id="field-username" class="form-control" >
+                                    <input type="text" name="username" id="field-username" class="form-control" pattern="[a-zA-Z0-9]{3,}" required>
                                 </div>
                             </div>
 
@@ -41,7 +43,24 @@
                                     <label class="form-label">Email:</label>
                                 </div>
                                 <div class="col-9">
-                                    <input type="email" class="form-control">
+                                    <div class="input-group">
+                                        <input type="email" class="form-control" required>
+                                        <span class="input-group-text">.com</span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row my-1">
+                                <div class="col-3">
+                                    <label class="form-label">Email:</label>
+                                </div>
+                                <div class="col-9">
+                                    <div class="form-floating">
+                                        <input type="email" id="email" class="form-control" placeholder="name@example.com" required>
+                                        <label for="email">Email</label>
+                                    </div>
                                 </div>
                             </div>
 
@@ -51,7 +70,7 @@
                                     <label class="form-label">Password:</label>
                                 </div>
                                 <div class="col-9">
-                                    <input type="password" class="form-control">
+                                    <input type="password" class="form-control" required>
                                 </div>
                             </div>
 
@@ -78,7 +97,7 @@
                                     <label class="form-label">CNIC:</label>
                                 </div>
                                 <div class="col-9">
-                                    <input type="text" class="form-control" pattern="[0-9]{5}-[0-9]{8}-[0-9]{1}">
+                                    <input type="text" class="form-control" pattern="[0-9]{5}-[0-9]{8}-[0-9]{1}" required>
                                 </div>
                             </div>
 
@@ -88,13 +107,13 @@
                                 </div>
                                 <div class="col-9">
                                     <div class="form-check">
-                                        <input class="form-check-input gender" type="radio" value="male" name="gender">
+                                        <input class="form-check-input gender" type="radio" checked value="male" name="gender" required>
                                         <label class="form-check-label">
                                             Male
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input gender" type="radio" value="female" name="gender">
+                                        <input class="form-check-input gender" type="radio" value="female" name="gender" required>
                                         <label class="form-check-label">
                                             Female
                                         </label>
