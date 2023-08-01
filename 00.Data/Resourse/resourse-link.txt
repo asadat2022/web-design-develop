@@ -4,3 +4,7 @@ Asynchronous JavaScript Crash Course: https://www.youtube.com/watch?v=exBgWAIeIe
 
 jQuery Tutorial For Beginners: https://www.youtube.com/watch?v=No6wCYe4oqk
 jQuery Advanced Full Course: https://www.youtube.com/watch?v=OSjDGLfNsDI
+
+
+=============== Theme ===============
+Admin LTE: https://github.com/ColorlibHQ/AdminLTE/archive/refs/tags/v3.2.0.zip
