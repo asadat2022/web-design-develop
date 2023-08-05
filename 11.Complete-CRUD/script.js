@@ -80,6 +80,40 @@ $(document).ready(() => {
             $('#edit-user').modal('hide');
         })
 
+        function onSubmit(event) {
+            if (!$(this)[0].checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+            } else {
+
+                let data = {
+                    name: $('#add-name').val(),
+                    username: $('#add-username').val(),
+                    email: $('#add-email').val(),
+                }
+                axios.post(base + '/users', data).then((res) => {
+                    let user = res.data;
+
+                    var view_btn = '<button type="button" class="btn btn-link view-user-class" user-id="' + user.id + '">View</button>';
+                    var update_btn = '<button type="button" class="btn btn-link edit-user-class" user-id="' + user.id + '">Edit</button>';
+                    var delete_btn = '<button type="button" class="btn btn-link delete-user-class" user-id="' + user.id + '">Delete</button>';
+                    $('#user-list').append(
+                        '<tr><td>' + user.name + '</td>' +
+                        '<td>' + user.username + '</td>' +
+                        '<td>' + user.email + '</td>' +
+                        '<td>' + user.phone + '</td>' +
+                        '<td>' + view_btn + '|' + update_btn + '|' + delete_btn + '</td></tr>'
+                    );
+                })
+                event.preventDefault();
+            }
+
+            $(this).addClass("was-validated");
+            $('#add-user').modal('hide');
+        }
+
+        $('#add-submit').submit(onSubmit)
+
 
 
         $('.delete-user-class').click(function () {
